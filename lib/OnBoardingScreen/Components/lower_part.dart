@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:travelappui/Constants/colors.dart';
+import 'package:travelappui/Constants/routes.dart';
 
 class LowerPart extends StatelessWidget {
   const LowerPart({
     Key? key,
+    required this.currentOne,
   }) : super(key: key);
 
-  final int currentOne = 0;
+  final int currentOne;
+
   @override
   Widget build(BuildContext context) {
     return Expanded(
@@ -58,11 +61,18 @@ class LowerPart extends StatelessWidget {
                 color: primaryColor,
                 borderRadius: BorderRadius.circular(25.0),
               ),
-              child: const Center(
-                child: Text(
-                  'Get Started',
-                  style: TextStyle(
-                    color: Colors.white,
+              child: Center(
+                child: TextButton(
+                  onPressed: () {
+                    Navigator.of(context).pushNamed(
+                      homePageRoute,
+                    );
+                  },
+                  child: const Text(
+                    'Get Started',
+                    style: TextStyle(
+                      color: Colors.white,
+                    ),
                   ),
                 ),
               ),

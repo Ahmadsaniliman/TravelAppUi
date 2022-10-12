@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:travelappui/OnBoardingScreen/Components/lower_part.dart';
-import 'package:travelappui/OnBoardingScreen/upper_part.dart';
 
 class OnBoradingScreen extends StatefulWidget {
   const OnBoradingScreen({Key? key}) : super(key: key);
@@ -12,6 +11,7 @@ class OnBoradingScreen extends StatefulWidget {
 class _OnBoradingScreenState extends State<OnBoradingScreen> {
   @override
   Widget build(BuildContext context) {
+    const int currentOne = 0;
     return Scaffold(
       body: SafeArea(
         child: Padding(
@@ -21,10 +21,23 @@ class _OnBoradingScreenState extends State<OnBoradingScreen> {
           ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
-            children: const [
-              UpperPart(),
-              SizedBox(height: 20.0),
-              LowerPart(),
+            children: [
+              Expanded(
+                flex: 3,
+                child: PageView.builder(
+                  itemCount: 3,
+                  onPageChanged: (value) {
+                    setState(() {
+                      value == currentOne;
+                    });
+                  },
+                  itemBuilder: (context, index) => Image.asset(
+                    'assets/images/OnBoardImage.png',
+                  ),
+                ),
+              ),
+              const SizedBox(height: 20.0),
+              const LowerPart(currentOne: currentOne),
             ],
           ),
         ),

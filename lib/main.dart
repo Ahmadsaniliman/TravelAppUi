@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:travelappui/Constants/routes.dart';
+import 'package:travelappui/Home/home.dart';
 import 'package:travelappui/OnBoardingScreen/on_borading_screen.dart';
 
 void main() {
@@ -8,7 +10,6 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -16,6 +17,9 @@ class MyApp extends StatelessWidget {
       title: 'Travel Ui Kit',
       theme: ThemeData(),
       home: const OnBoradingScreen(),
+      routes: {
+        homePageRoute : (context) => const HomePageView(),
+      },
     );
   }
 }
