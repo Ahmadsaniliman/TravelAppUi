@@ -3,6 +3,9 @@ import 'package:travelappui/Home/Components/build_app_bar.dart';
 import 'package:travelappui/Home/fav_view.dart';
 import 'package:travelappui/Home/where_to_go_info.dart';
 
+import '../Constants/bottom_nav.dart';
+import '../Constants/enums.dart';
+
 class HomePageView extends StatefulWidget {
   const HomePageView({Key? key}) : super(key: key);
 
@@ -30,6 +33,9 @@ class _HomePageViewState extends State<HomePageView> {
             ),
           ),
         ),
+      ),
+      bottomNavigationBar: const BottomNavAction(
+        selectedMenu: NavAction.home,
       ),
     );
   }
