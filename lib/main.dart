@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(),
       home: const OnBoradingScreen(),
       routes: {
-        homePageRoute : (context) => const HomePageView(),
+        homePageRoute: (context) => const HomePageView(),
       },
     );
   }

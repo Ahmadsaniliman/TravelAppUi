@@ -14,8 +14,11 @@ class BottomNavAction extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      padding: const EdgeInsets.symmetric(
+        horizontal: 20.0,
+      ),
       height: 60,
-      color: secondaryColor,
+      color: backgroundColor,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
@@ -27,9 +30,8 @@ class BottomNavAction extends StatelessWidget {
             },
             icon: Icon(
               Icons.home,
-              color: selectedMenu == NavAction.home
-                  ? primaryColor
-                  : secondaryColor,
+              color:
+                  selectedMenu == NavAction.home ? primaryColor : Colors.black,
             ),
           ),
           IconButton(
