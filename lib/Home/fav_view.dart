@@ -49,7 +49,10 @@ class FavView extends StatelessWidget {
                   width: double.infinity,
                   child: Stack(
                     children: [
-                      Image.asset(demoPlaces[index].image),
+                      Image.asset(
+                        demoPlaces[index].image,
+                        fit: BoxFit.fill,
+                      ),
                       Positioned(
                         bottom: 0,
                         right: 35,

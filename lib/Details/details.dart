@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:travelappui/Constants/bom_nav.dart';
 import 'package:travelappui/Constants/data.dart';
+import 'package:travelappui/Details/Components/des_text.dart';
 import 'package:travelappui/Details/Components/details_build_app_bar.dart';
+import 'package:travelappui/Details/Components/location_details.dart';
+
+import '../Constants/colors.dart';
 
 class DetailsPageView extends StatelessWidget {
   const DetailsPageView({
@@ -21,32 +26,13 @@ class DetailsPageView extends StatelessWidget {
           child: Column(
             children: [
               const BuildDetailsAppBar(),
-              Column(
-                children: [
-                  Image.asset(
-                    location!.image,
-                    height: 300,
-                    fit: BoxFit.fill,
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(location!.text),
-                          Text(location!.subText),
-                        ],
-                      ),
-                      Text(location!.price),
-                    ],
-                  ),
-                ],
-              ),
+              LocationDetails(location: location),
+              const DecText(),
             ],
           ),
         ),
       ),
+      bottomNavigationBar: BottomNav(location: location),
     );
   }
 }

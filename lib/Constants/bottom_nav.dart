@@ -46,8 +46,8 @@ class BottomNavAction extends StatelessWidget {
           IconButton(
             onPressed: () {},
             icon: Icon(
-              Icons.location_city,
-              color: selectedMenu == NavAction.location
+              Icons.notifications,
+              color: selectedMenu == NavAction.notification
                   ? primaryColor
                   : secondaryColor,
             ),
@@ -55,8 +55,8 @@ class BottomNavAction extends StatelessWidget {
           IconButton(
             onPressed: () {},
             icon: Icon(
-              Icons.notifications,
-              color: selectedMenu == NavAction.notification
+              Icons.chat,
+              color: selectedMenu == NavAction.location
                   ? primaryColor
                   : secondaryColor,
             ),

@@ -11,9 +11,9 @@ class WhereToGoInfo extends StatefulWidget {
 }
 
 class _WhereToGoInfoState extends State<WhereToGoInfo> {
+    int currentLocation = 0;
   @override
   Widget build(BuildContext context) {
-    const currentLocation = 3;
     final List<String> categories = [
       'Camping',
       'Mountain',
@@ -82,7 +82,7 @@ class _WhereToGoInfoState extends State<WhereToGoInfo> {
             itemBuilder: (context, index) => InkWell(
               onTap: () {
                 setState(() {
-                  currentLocation == index;
+                  currentLocation = index;
                 });
               },
               child: Container(

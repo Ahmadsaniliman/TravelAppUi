@@ -14,11 +14,15 @@ class BUildAppBar extends StatelessWidget {
         Row(
           children: [
             Container(
-              height: 60,
-              width: 60,
+              height: 50,
+              width: 50,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(15.0),
                 color: primaryColor,
+              ),
+              child: const Icon(
+                Icons.person,
+                color: Colors.white,
               ),
             ),
             const SizedBox(width: 7.0),
@@ -43,8 +47,8 @@ class BUildAppBar extends StatelessWidget {
           ],
         ),
         Container(
-          width: 60,
-          height: 60,
+          width: 50,
+          height: 50,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(20.0),
             color: primaryColor,

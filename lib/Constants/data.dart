@@ -23,6 +23,18 @@ final List<Places> demoPlaces = [
     image: 'assets/images/Rectangle 6.png',
     text: 'Tanjung Aan',
     subText: 'Pujut, Lombok Tengah',
+    price: '\$240',
+  ),
+  Places(
+    image: 'assets/images/Rectangle 5.png',
+    text: 'Tanjung Aan',
+    subText: 'Pujut, Lombok Tengah',
     price: '\$230',
+  ),
+  Places(
+    image: 'assets/images/Rectangle 6.png',
+    text: 'Tanjung Aan',
+    subText: 'Pujut, Lombok Tengah',
+    price: '\$240',
   ),
 ];

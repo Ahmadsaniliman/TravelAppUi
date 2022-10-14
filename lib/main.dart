@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:travelappui/Constants/routes.dart';
+import 'package:travelappui/Details/details.dart';
 import 'package:travelappui/Home/home.dart';
 import 'package:travelappui/OnBoardingScreen/on_borading_screen.dart';
 
@@ -19,6 +20,9 @@ class MyApp extends StatelessWidget {
       home: const OnBoradingScreen(),
       routes: {
         homePageRoute: (context) => const HomePageView(),
+        detailsPageRoute: (context) => const DetailsPageView(
+              location: null,
+            ),
       },
     );
   }

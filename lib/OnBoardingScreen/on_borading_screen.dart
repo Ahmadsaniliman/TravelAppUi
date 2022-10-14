@@ -9,9 +9,9 @@ class OnBoradingScreen extends StatefulWidget {
 }
 
 class _OnBoradingScreenState extends State<OnBoradingScreen> {
+  int currentOne = 0;
   @override
   Widget build(BuildContext context) {
-    const int currentOne = 0;
     return Scaffold(
       body: SafeArea(
         child: Padding(
@@ -28,7 +28,7 @@ class _OnBoradingScreenState extends State<OnBoradingScreen> {
                   itemCount: 3,
                   onPageChanged: (value) {
                     setState(() {
-                      value == currentOne;
+                      currentOne = value;
                     });
                   },
                   itemBuilder: (context, index) => Image.asset(
@@ -37,7 +37,7 @@ class _OnBoradingScreenState extends State<OnBoradingScreen> {
                 ),
               ),
               const SizedBox(height: 20.0),
-              const LowerPart(currentOne: currentOne),
+              LowerPart(currentOne: currentOne),
             ],
           ),
         ),

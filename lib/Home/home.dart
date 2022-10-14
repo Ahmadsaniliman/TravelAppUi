@@ -19,9 +19,10 @@ class _HomePageViewState extends State<HomePageView> {
     return Scaffold(
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.symmetric(
-            vertical: 20.0,
-            horizontal: 20.0,
+          padding: const EdgeInsets.only(
+            top: 20.0,
+            left: 20.0,
+            right: 20.0,
           ),
           child: SingleChildScrollView(
             child: Column(
